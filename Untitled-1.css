@@ -1,0 +1,110 @@
+/*Untitled-1-css*/
+
+/*2019-8-9 author:小悟空*/
+/*在进行网页设计时，最好先用建立各部分border，在逐一进行样式设计*/
+
+body{
+    border: 3px red solid;
+    width: 800px;
+    height: 100%;
+    margin: 0px auto;
+    font-family: "楷体";
+}
+
+
+header{
+    border: 1px solid, red;
+    border-bottom-color:black;
+    width: 800px;
+    height: 80px;
+    background: azure;
+}
+
+aside{
+    border: 1px solid ;
+    border-right-color:blueviolet;
+    border-left-color:red;
+    border-top-color:black;
+    border-bottom-color: black;
+    float: left;
+    height: 400px;
+    width: 170px;
+    background: antiquewhite;
+}
+
+nav{
+    border: 0px solid red;
+    margin: 0px auto;
+    padding: 0px;
+    margin-top: 150px;
+   
+}
+article{
+    border: 1px  solid;
+    border-right-color:red;
+    border-left-color:blueviolet;
+    width: 627px;
+    height: 400px;
+    margin-left: 172px;
+}
+
+img{
+    width: 150px;
+    height: 100px;
+}
+
+#id01{
+    border: red 0px solid;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+footer{
+    border: 0px blueviolet solid;
+    width: 800px;
+    height: 80px;
+    margin: 0px auto;
+}
+#footerp{
+    border: 0px red solid;
+    text-align: center;
+    font-family:  "楷体" ;
+    font-size: 20px;
+}
+
+#lena{
+    border: 0px blue solid;
+    margin-left:10px;
+     
+}
+
+#text01{
+    border: 0px black solid;
+    margin-left: 6px;
+    margin-top: 3px;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 8px #c22dcf;
+
+}
+
+#text02{
+    border: 0px red solid;
+    z-index: 1;
+    margin-left: 180px;
+    margin-top: -63px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    text-shadow: 1px 1px  8px rgb(189, 26, 20);
+}
+
+a{
+    text-decoration: none;         /*去掉下划线*/
+}
+
+section{
+    border:black 0px solid;
+    width : 540px;
+    margin: 10px auto;
+}
+
