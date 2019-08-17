@@ -6,26 +6,21 @@
 body{
     border: 3px red solid;
     width: 800px;
-    height: 80%%;
+    height: 80%;
     margin: 0px auto;
     font-family: "楷体";
 }
 
 
 header{
-    border: 1px solid, red;
-    border-bottom-color:black;
+	border-bottom:1px solid black;
     width: 800px;
     height: 80px;
     background: azure;
 }
 
 aside{
-    border: 1px solid ;
-    border-right-color:blueviolet;
-    border-left-color:red;
-    border-top-color:black;
-    border-bottom-color: black;
+	border-right: #6A08A4 solid 1px;
     float: left;
     height: 400px;
     width: 170px;
@@ -53,27 +48,25 @@ img{
     height: 100px;
 }
 
-#id01{
-    border: red 0px solid;
-    margin-left: 45px;
-    margin-top: 10px;
-}
 
 footer{
-    border: 0px blueviolet solid;
+    border-bottom: 1px blueviolet solid;
     width: 800px;
-    height: 80px;
+    height: 56px;
     margin: 0px auto;
 }
+
 #footerp{
-    border: 0px red solid;
-    text-align: center;
+	
+    margin-left: 190px;
     font-family:  "楷体" ;
     font-size: 20px;
 }
+#A{
+	margin-left: 10px;
+}
 
 #lena{
-    border: 0px blue solid;
     margin-left:10px;
      
 }
@@ -107,4 +100,9 @@ section{
     width : 540px;
     margin: 10px auto;
 }
+
+img {border-radius:50px 10px}
+img {border-style:dashed}           /*(solid)(double双实线)(dotted点线)(inset3D嵌入线)(outset3D浮出线)*/
+img {border-width:2px}              /*边框宽度*/
+img {border-color:red purple yellow green}
 
