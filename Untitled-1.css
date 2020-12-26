@@ -1,6 +1,5 @@
 /*Untitled-1-css*/
 
-/*2019-8-9 author:小悟空*/
 /*在进行网页设计时，最好先用建立各部分border，在逐一进行样式设计*/
 
 body{
@@ -22,6 +21,7 @@ aside{
     float: left;
     background: antiquewhite;
 	width: 16%;
+	height: 100%;
 	
 }
 
@@ -42,12 +42,8 @@ article{
 }
 
 img{
-    width: 150px;
-    height: 100px;
-}
-
-#id01{
-	height:  200px;
+    width: 200px;
+    height: 160px;
 }
 
 
@@ -58,6 +54,32 @@ footer{
     margin: 0px auto;
 }
 
+#div01{
+	margin-top: 10px;
+	
+}
+
+#div02{
+	width: 200px;
+    height: 100px;
+    background-color: aquamarine;
+	float: right;
+	margin-top: 10px;
+	
+}
+
+#id01{
+	float: none;
+	
+}
+
+
+
+#id02_2{
+	background-color: rgba(164,164,164,1.00)
+}
+
+
 #footerp{
 	
     margin-left: 190px;
@@ -65,9 +87,12 @@ footer{
     font-size: 20px;
 }
 
+/*
 .fa1{
 	margin-top: 10px;
 }
+*/
+
 
 #A{
 	margin-left: 20px;

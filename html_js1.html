@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>world js</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="小悟空">
+
+</head>
+
+<body onload="denglu()">
+    <!--创建对象-->
+    <script>
+        function people(name,age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        son = new people("小悟空", 5);                                       //第一种:通过方法来创建对象
+        document.write("name: "+son.name+ "<br/>"+ " age: "+ son.age);      //换行操作
+
+        people2 = new Object();                                             //第二种:通过Object类来创建对象
+        people2.name = "小悟空2";
+        document.write("name: "+people2.name);
+
+        //   <br/>不能直接添加到<script>标签内部   在输出的才可以使用标签
+        people3 = {name:"小悟空3", age:5}; 
+        document.write("<br/>"+"name: "+people3.name + "<br/>")
+    </script>
+  
+    <!--字符串操作-->
+    <script>
+        var str = "Hello world";
+        document.write(str.indexOf("w") + "<br/>");             //寻找指定字符串位置
+        document.write(str.match("hello") + "<br/>");           //匹配是否存在
+        /*(replace("原来的","")、(toUpperCase/toLowerCase)*/
+
+        var s = str.split(" ");                                 //字符串分割
+        for(var i=0; i<s.length; i++)
+        {
+            document.write(s[i]+"<br/>");
+        }
+    </script>
+
+    <!--时间对象-->
+    <script>
+        var date1 = new Date();
+        document.write(date1);                        //获取时间(.getFullYear()年份)(.getTime()毫秒)(getDay星期)
+        date1.setFullYear(2025,1,1);                  //设置时间   也要依据对象来设置
+        document.write(date1)
+    </script>
+
+    <!--时钟-->
+    <script>
+        function startTime()
+        {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("tiemtxt").innerHTML = h+":"+m+":"+s;
+            t = setTimeout(function(){ startTime(); }, 500);      //递归调用
+        }
+        function checkTime(i)
+        {
+            if (i<10)
+            {
+                i = "0" + i;             //js中字符串特性造就了该功能；
+            }
+            return i;
+        }
+    </script>
+    <div id="tiemtxt"></div>  <br/>
+
+    <!--数组对象-->
+    <script>
+        var a = ["a", "b"];
+        var b = ["小悟空","小哪吒"];
+        document.write(a.concat(b));
+        var c = ["大傻","5","b","3","嗯","小悟空","4","6","a",]; //按照第一个英文字母排，只有一个字母的汉字最大；
+        document.write(c.sort()); 
+        document.write(a.sort (function(a,b) { return b-a;}) ); //降序(好像只能排数字啊),不好玩
+        a.push("c");                                            //追加
+        var d=c.sort();
+        document.write(d.reverse());                            //翻转(降序)
+    </script>     
+
+
+    <!--Math对象-->
+    <script>
+        document.write(Math.round(2.5));   //四舍五入    (abs())绝对值
+        document.write(Math.random());     //随机数0-1  （parseInt(Math.random()*10）1-10之间整数
+    </script>
+
+    <!--histor-->
+    <a href="html_js2.html">跳转</a>
+    <script>
+        function historyforward()
+        {
+            history.forward();
+        }
+    </script>
+    <button onclick="historyforward()">向前</button>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOM(js)</title>
+        <meta charset="utf-8">
+        <meta name="author" content="小悟空">
+
+    </head>
+    <body>
+	<!--窗口操作(链接，关闭，获得高宽)-->
+        <script>
+            document.write("高度:"+ window.innerHeight + " 宽度:" + window.innerWidth)   //浏览器内容区域大小
+
+            function openwindow()
+            {
+                window.open("http://www.baidu.com", "windowname", "width=200, height=200");     //打开窗口
+            }
+
+        </script>
+        <button id="btn" onclick="openwindow()">百度小窗口</button> <br/><br/>
+
+	
+        <!--时钟操作-->
+        <scan id="time"></scan>
+        <script>
+            var mytime = setInterval(function(){ getTime() }, 1000); //间隔指定毫秒数 不断执行代码
+            function getTime()
+            {
+                var d = new Date();
+                var t = d.toLocaleTimeString();
+                document.getElementById("time").innerHTML = t;
+            }
+            function stopTime()
+            {
+                clearInterval(mytime);                          //停止执行
+            }
+        </script>
+		<button onclick="stopTime()">时间停止</button>
+
+        <script>
+            
+            function myWin()
+            {
+                var win = setTimeout(function(){ alert("xixi") }, 1000);        //延时执行
+            }                                                                   //如果用递归方式循环，clearTimeout停止
+        </script>
+        <button onclick="myWin()">弹出</button>
+
+        <!--History操作-->
+        <script>
+            function histtoryback()
+            {
+                history.back();
+            }
+        </script>
+        <button onclick="histtoryback()">返回</button>
+
+
+        <form>
+            <input type="text" id="username">
+            <button id="fbtn" onclick="safe()">登录</button>
+        </form>
+ 
+        <script>
+            function safe()
+            {
+                var name = document.getElementById("username").value;
+                if(name=="hello")
+                {
+                    history.go(-1);          //  (0,1,-1)
+                }else{
+                    alert("亲，用户名不存在哦~");
+                }
+            }
+        </script><br/>
+
+
+        <!--Location-->
+        <p id="pab"> xixi</p>
+        <button onclick="getLoc()">显示</button>
+        <script>
+            function getLoc()
+            {
+                document.getElementById("pab").innerHTML = window.location.href;   //当前地址
+            }                       //.hostname(web主机域名) .pathname(文件路径)
+        </script>
+
+        <!--screen-->
+        <script>
+            document.write("可用高度："+ screen.availHeight+ "可用宽度："+ screen.availWidth);
+            document.write("高度: "+ screen.height+ "宽度: "+screen.width);
+        </script>
+    </body>
+
+</html>

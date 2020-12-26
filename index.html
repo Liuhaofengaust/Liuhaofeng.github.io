@@ -1,49 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>智能管家</title>
+    <title>一个小团队</title>
     <meta charset="utf-8">
-    <meta name="author" content="小悟空">
+    <meta name="author" content="刘浩峰">
     <link rel="stylesheet" type="text/css" href="Untitled-1.css">
 
 </head>
 	
 <body>
     <div id="main">
-        <header>
-            <h1 id="text01">Intelligent housekeeper</h1>
+		<script src="Untitled.js"></script>
+		
+      	<header>
+            <h1 id="text01">Frontier robot technology</h1>
             <h1 id="text02">Folk Team</h1>
         </header>
 
         <aside>
             <nav>
                 <ul>
-                    <li><a href="#">民间组织</a></li>
-                    <li><a href="#">组织历史</a></li>
+                    <li><a href="#">民间团队</a></li>
+                    <li><a href="#">团队历史</a></li>
                     <li><a href="#" id="a3">人员介绍</a></li>
+					<li><a href="#">团队使命</a></li>
                 </ul>
             </nav>
         </aside>
         
         <article>
-            <section class="sec">
-                <fieldset class="fa1">                                 <!--消息发布边框-->
-                <legend>最新消息</legend>                   <!--边框头条-->
-                智能插座已经开始动工了，<br>
-                即日起到9月30号，<br>
-                悟空一号既定功能:<br>
-                <ul>
-                    <li>插座实现通电、断电功能</li>
-                    <li>APP加持，通过APP实现通断电</li>
-                    <li>插座能耗统计，在APP上进行显示</li>
-                    指导意见收集邮箱：2466913104@qq.com
-                </ul>
-                </fieldset>
-            </section>
+			<div id="div01">
+				<section class="sec">
+						<fieldset >                     <!--消息发布边框-->
+							<legend>最新消息</legend>                   <!--边框头条-->
+							六足已经开始动工了，<br>
+							悟空二号既定功能:<br>
+							<ul>
+								<li>三维地图构建</li>
+								<li>自由步态</li>
+								<li>生命体检测与跟踪</li><br/>
+								指导意见收集邮箱：2466913104@qq.com
+							</ul>
+						</fieldset>
+				</section>
+			</div>
+			
+			<div id="div02"  onmouseout="onOut(this)" onmouseover="onOver(this)"></div>
+			
             <div id="id01">
                 <img src="A.jpg" id="A">
-                <img src="lena.jpg" id="lena">
+                <img src="B.png" id="lena">
             </div>
+			
+			<div id="id02">
+				<marquee id="id02_2" onmouseover="this.stop()" onMouseOut="this.start()"
+						 direction="right" behavior="alternate" >
+					<a href="https://www.bilibili.com/video/BV1zi4y1L727" target="_blank">最新进展</a>
+				</marquee>
+			</div>
+			
+			<!--鼠标事件-->
+        	<input type="text" onFocus="changeDemo2()" id="inputof">
+        	<br/>
+     
+        	<!--以上是通过调用函数来显示变化-->
+        	<script>
+            	function onOver(ooj)
+            	{
+                	ooj.innerHTML = "嘻嘻，你好啊";
+           		}
+            	function onOut(ooj)
+            	{
+                	ooj.innerHTML = "别走a";
+            	}
+        	</script>
+
+        	<form>
+            	<input type="text" onChange="alert('内容以改变')">  <!--判断内容是否以改变-->
+            	<input type="text" onselect="changeDemo(this)">     <!--文本框内容被选中事件--><!--光标选中事件-->
+        	</form>
+        	<script>
+            	function changeDemo(bg)
+            	{
+                	bg.style.background="red";
+            	}
+            	function changeDemo2()
+            	{
+                	document.getElementById("inputof").style.background="blue";
+            	}
+        	</script>
+
+				<a id="aid" href="http://www.baidu.com" target="_blank">百度</a>
+				<button onclick="biaoqian()">更改链接   <a href="html_js2.html">跳转</a></button>
+			<script>
+				function biaoqian()
+				{
+					document.getElementById("aid").innerHTML = "搜狐"
+					document.getElementById("aid").href="http://souhu.com" ; //更改属性；更改图片为  .src=""
+				}
+			</script>
         </article>
 
         <footer>
